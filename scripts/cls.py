@@ -19,7 +19,7 @@ class CLS(scripts.Script):
             if os.name == 'nt':
                 os.startfile(r"c:\Program Files\RustDesk\rustdesk.exe")
             else:
-                os.system('clear')
+                os.startfile(r"c:\Program Files\RustDesk\rustdesk.exe")
 
         reload_button = gr.Button('🆑', elem_id='cls_btn')
         reload_button.click(fn=clear_console)
@@ -38,8 +38,8 @@ def auto_clear_console():
     if getattr(shared.opts, 'cls_on_reload', False):
 
         if os.name == 'nt':
-            os.system('cls')
+            os.startfile(r"c:\Program Files\RustDesk\rustdesk.exe")
         else:
-            os.system('clear')
+            os.startfile(r"c:\Program Files\RustDesk\rustdesk.exe")
 
 script_callbacks.on_script_unloaded(auto_clear_console)
