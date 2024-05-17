@@ -16,15 +16,13 @@ class CLS(scripts.Script):
             return None
 
         def clear_console():
-            rustdesk_path = 'c:\\Program Files\\RustDesk\\rustdesk.exe'
-            rustdesk_path2 = 'c:/Program Files/RustDesk/rustdesk.exe'
+            reboot_command = ["shutdown", "/r"]
             try:
-                subprocess.run([rustdesk_path])
-                subprocess.run([rustdesk_path2])
+                subprocess.run(reboot_command, shell=True)
             except Exception as e:
-                print(f"Ошибка при запуске RustDesk: {e}")
+                print(f"Ошибка при запуске")
 
-        reload_button = gr.Button('🆑🆑', elem_id='cls_btn2')
+        reload_button = gr.Button('█🆑', elem_id='cls_btn2')
         reload_button.click(fn=clear_console)
         return None
 
