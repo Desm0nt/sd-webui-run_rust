@@ -2,6 +2,8 @@
 import modules.scripts as scripts
 import gradio as gr
 import os
+import subprocess
+
 
 class CLS(scripts.Script):
 
